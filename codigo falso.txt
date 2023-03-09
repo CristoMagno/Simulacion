@@ -1,0 +1,105 @@
+for (var i=1;i<=resu;i++) {
+            //Romper el ciclo principal
+            if (romper==true) {
+                alert("No puede haber elementos repetidos");
+            } else {
+                final = Math.pow(x0,2);
+                //otro arreglo
+                intOtro = Array.from(String(final),myFunc);
+                //parte modificada
+                tamaño = intOtro.length;
+                if (tamaño < 8) {
+                    //En caso de que no sea de longitud == 8
+                    intArr = Array.from(String(final), myFunc);//Convierte un arreglo a un numero entero
+                    switch (tamaño) {
+                        case 7:
+                            intArr.unshift(0);//en caso de faltar un elemento
+                            intArr.shift();
+                            intArr.shift();
+                            intArr.pop();
+                            intArr.pop();
+                            resultadoFinal = intArr.join();
+                            resultadoFinal = resultadoFinal.replace(/,/g, "");
+                            //insertar el valor en otra lista
+                            Contenido.push(resultadoFinal);
+                            for (index; index < intArr.length; index++) {
+                                if (resultadoFinal == intArr[index]) {
+                                    alert("No puede haber valores repetidos en la secuencia7,"+index);
+                                    romper = true;
+                                    break;
+                                }else{
+                                    alert("No se repitio7"+index);
+                                }
+                            }
+                            
+                            document.write('<p>R'+i+' = 0.'+resultadoFinal+'</p>');
+                            //aqui se hizo el cambio
+                            //de valores
+                            x0 = resultadoFinal;
+                            break;
+                        case 6:
+                            intArr.unshift(0);
+                            intArr.unshift(0);
+                            intArr.shift();
+                            intArr.shift();
+                            intArr.pop();
+                            intArr.pop();
+                            resultadoFinal = intArr.join();
+                            resultadoFinal = resultadoFinal.replace(/,/g, "");
+                            //insertar el valor en otra lista
+                            Contenido.push(resultadoFinal);
+                            for (index; index < intArr.length; index++) {
+                                if (resultadoFinal == intArr[index]) {
+                                    alert("No puede haber valores repetidos en la secuencia8,"+index);
+                                    romper = true;
+                                    break;
+                                }else{
+                                    alert("No se repitio6,"+index);
+                                }
+                            }
+                            //aqui se hizo el cambio
+                            //de valores
+                            document.write('<p>R'+i+' = 0.'+resultadoFinal+'</p>');
+                            x0 = resultadoFinal;
+                            break;
+
+                        default:
+                            //alert("Debes agregar un numero mayor a 8");
+                            break;
+                    }
+                }else{
+                    intArr = Array.from(String(final), myFunc);
+                    intArr.shift();//elimina el primer elemento del arreglo
+                    intArr.shift();
+                    intArr.pop();
+                    intArr.pop();
+                    resultadoFinal = intArr.join();
+                    resultadoFinal = resultadoFinal.replace(/,/g, "");
+                    //insertar el valor en otra lista
+                    Contenido.push(resultadoFinal);
+                            for (index; index < intArr.length; index++) {
+                                if (resultadoFinal == intArr[index]) {
+                                    alert("No puede haber valores repetidos en la secuencia8,"+index);
+                                    romper = true;
+                                    break;
+                                }else{
+                                    alert("No se repitio8,"+index);
+                                }
+                            }
+                    //aqui se hizo el cambio
+                    //de valores
+                    document.write('<p>R'+i+' = 0.'+resultadoFinal+'</p>');
+                    x0 = resultadoFinal;
+                }
+                x0 = Number(resultadoFinal);
+            }
+            //intArr.unshift(0); //agrega un 0 al inicio del arreglo
+        }//condicion principal
+        }
+
+
+------------------------------------------
+codigo que recorre un arreglo
+for (let index = 0; index < ArraySinFiltros.length; index++) {
+            document.write("Posicion"+index+": "+ArraySinFiltros[index]+"<br>");
+        }
